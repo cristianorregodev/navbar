@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+/* Variables */
+:root {
+  --primario: rgb(30, 46, 46);
+  --primario2: darkslategray;
+  --secundario: rgb(144, 173, 173);
+  --blanco: rgb(245, 237, 237);
+}
+
+/* Globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Monserrat", sans-serif;
+}
+a {
+  color: var(--secundario);
+  text-decoration: none;
+  transition: all 400ms;
+}
+
+/* Navegacion */
+header {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+div.logo-toggle {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 25px;
+  background-color: var(--primario);
+}
+div.logo-toggle a img {
+  max-width: 100px;
+}
+div.logo-toggle button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+nav {
+  margin-right: 1500px;
+  transition: all 400ms;
+  background-color: var(--primario2);
+}
+ul {
+  min-height: 250px;
+  list-style: none;
+}
+ul li {
+  padding: 50px 0 0;
+}
+
+div.social {
+  padding: 50px 0;
+}
+
+.show {
+  margin-right: 0;
+}
+
+/* Navegacion responsive */
+@media (min-width: 930px) {
+  .logo-toggle a:hover {
+    padding: 0;
+    border-radius: none;
+    background: none;
+  }
+  a:hover {
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--primario);
+    background-color: var(--blanco);
+  }
+  .active {
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--primario);
+    background-color: var(--blanco);
+  }
+  div.logo-toggle button {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: rgb(30, 46, 46);
+
+    height: 60px;
+    padding: 0 50px;
+  }
+  div.logo-toggle {
+    background: none;
+  }
+  nav {
+    display: flex;
+    margin-right: 0;
+    width: 100%;
+    justify-content: space-between;
+    background: none;
+  }
+  ul {
+    display: flex;
+    gap: 25px;
+    min-height: 100%;
+  }
+  ul li {
+    padding: 0;
+  }
+
+  ul li a {
+    padding: 10px;
+  }
+
+  div.social {
+    display: block;
+    padding: 0;
+  }
+  div.social a {
+    padding: 10px;
+  }
+  div.social a:hover {
+    border-radius: none;
+    color: var(--blanco);
+    background: none;
+  }
+}
